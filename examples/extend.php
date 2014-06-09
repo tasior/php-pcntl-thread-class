@@ -22,7 +22,7 @@ try {
 
     echo 'Variable $i in maing thread is: ' . $i;
     echo 'Thread started. (PID: ' . $thread->getProcessId() . ')' . PHP_EOL;
-    echo 'Waiting for ';
+    echo 'Waiting for thread...' . PHP_EOL;
 
     $thread->join();
 
