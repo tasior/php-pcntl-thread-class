@@ -26,7 +26,7 @@ try {
 
     $thread->join();
 
-    echo 'Thread ended. Variable $i from maing thread is stil: ' . $i;
+    echo 'Thread ended. Variable $i from maing thread is stil: ' . $i . PHP_EOL;
 } catch (PcntlThreading\ThreadStartException $e) {
     echo $e->getTraceAsString();
 }
