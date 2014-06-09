@@ -3,7 +3,7 @@
 chdir(realpath(dirname(__FILE__) . '/..'));
 spl_autoload_register();
 
-class MyThread extends PcntlThreading\PcntlThread {
+class MyThread extends PcntlThreading\Thread {
 
     public function run() {
         for ($i = 0; $i < 5; $i++) {
@@ -27,6 +27,6 @@ try {
     $thread->join();
 
     echo 'Thread ended. Variable $i from maing thread is stil: ' . $i;
-} catch (PcntlThreading\PcntlThreadStartException $e) {
+} catch (PcntlThreading\ThreadStartException $e) {
     echo $e->getTraceAsString();
 }

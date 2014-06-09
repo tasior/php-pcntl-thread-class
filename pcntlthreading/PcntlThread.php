@@ -7,13 +7,13 @@ namespace PcntlThreading;
  * @author Jacek Górka <jacek.gorka2@gmail.com>
  * @todo Write documentation
  */
-class PcntlThread {
+class Thread {
 
     private $_processId = 0;
     private $_parentId = 0;
     private $_worker = null;
 
-    public function __construct(PcntlThreadWorker $worker = null) {
+    public function __construct(ThreadWorker $worker = null) {
         $this->_worker = $worker;
     }
 
@@ -27,7 +27,7 @@ class PcntlThread {
         $this->_processId = pcntl_fork();
 
         if ($this->_processId == -1) {
-            throw new PcntlThreadStartException();
+            throw new ThreadStartException();
         } else if ($this->_processId) {
             $this->_parentId = posix_getpid();
             return;

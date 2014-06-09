@@ -7,6 +7,6 @@ namespace PcntlThreading;
  *
  * @author Jacek Górka <jacek.gorka2@gmail.com>
  */
-class PcntlThreadStartException extends \Exception{
+class ThreadStartException extends \Exception{
     
 }

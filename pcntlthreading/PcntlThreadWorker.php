@@ -6,7 +6,7 @@ namespace PcntlThreading;
  *
  * @author Jacek Górka <jacek.gorka2@gmail.com>
  */
-abstract class PcntlThreadWorker {
+abstract class ThreadWorker {
             
     abstract protected function run();
     

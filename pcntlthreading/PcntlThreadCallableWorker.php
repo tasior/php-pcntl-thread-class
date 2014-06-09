@@ -6,7 +6,7 @@ namespace PcntlThreading;
  *
  * @author Tasior
  */
-class PcntlThreadCallableWorker extends PcntlThreadWorker{
+class ThreadCallableWorker extends ThreadWorker{
     
     private $_callback;
     private $_arguments;
